@@ -6,12 +6,16 @@ class SearchFacade
 
   def stations
     stations_search_results.map do |station|
-      Station.new(station[])
+      Station.new(station)
     end
   end
 
+  def service
+    @service ||= DeveloperNetworkService.new({zip: @zip})
+  end
+
   def stations_search_results
-    @stations ||= DeveloperNetworkService.new({zip: @zip})
+    @stations ||= service.stations
   end
 
 end

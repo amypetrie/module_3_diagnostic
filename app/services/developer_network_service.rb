@@ -10,11 +10,6 @@ class DeveloperNetworkService
     JSON.parse(response.body, symbolize_name: true)["fuel_stations"]
   end
 
-  # def get_json(url)
-  #   response = conn.get(url)
-  #   JSON.parse(response.body, symbolize_name: true)[:fuel_stations]
-  # end
-
   def conn
     Faraday.new("https://developer.nrel.gov/api/alt-fuel-stations/v1/nearest.json") do |faraday|
       faraday.params['api_key'] = ENV["DEVELOPER_NETWORK_API_KEY"]
