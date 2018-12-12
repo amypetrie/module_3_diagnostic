@@ -19,6 +19,9 @@ describe "As a user" do
     page.fill_in "q", with: 80203
     click_on "Locate"
 
+    stub_request(:get, "https://developer.nrel.gov/api/alt-fuel-stations/v1/nearest.json")
+      to_return(body: File.read("./spec/fixtures/stations_results.json"))
+
     expect(page).to have_content
   end
 end

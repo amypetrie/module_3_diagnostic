@@ -57,6 +57,6 @@ RSpec.configure do |config|
   VCR.configure do |config|
     config.cassette_library_dir = "fixtures/vcr_cassettes"
     config.hook_into :webmock
-    config.filter_sensitive_data('<DEVELOPER_API_KEY>'){ ENV[:DEVELOPER_NETWORK_API_KEY] }
+    config.filter_sensitive_data('<DEVELOPER_API_KEY>'){ ENV["DEVELOPER_NETWORK_API_KEY"] }
   end
 end

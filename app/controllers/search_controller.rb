@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
 
   def index
-    @facade = SearchFacade.new
+    @facade = SearchFacade.new(params[:q])
   end
 
 end
