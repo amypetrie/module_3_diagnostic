@@ -2,6 +2,7 @@
 
 <div class="stations">
   <% @facade.stations.each do |station| %>
-    <li class="station_stat">Station name: <%= station.name %> </li>
+    <li class="station_name">Station name: <%= station.name %> </li>
+    <li class="station_distance">Distance: <%= station.distance %> miles </li>
   <% end %>
 </div>
