@@ -1,0 +1,7 @@
+<h1>10 Closest Electric and Propane Stations</h1>
+
+<div class="stations">
+  <% @facade.stations.each do |station| %>
+    <li class="station_stat"><%= station.name %> </li>
+  <% end %>
+</div>
