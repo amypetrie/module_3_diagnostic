@@ -11,16 +11,17 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'faraday'
 gem 'figaro'
+gem 'fast_jsonapi'
 
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
+  gem 'pry'
 end
 
 group :development do
   gem 'web-console', '~> 3.5.1'
   gem 'listen'
-  gem 'pry'
 end
 
 group :test do
