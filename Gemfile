@@ -20,6 +20,7 @@ end
 group :development do
   gem 'web-console', '~> 3.5.1'
   gem 'listen'
+  gem 'pry'
 end
 
 group :test do
@@ -27,4 +28,3 @@ group :test do
   gem 'webmock'
   gem 'capybara'
 end
-
